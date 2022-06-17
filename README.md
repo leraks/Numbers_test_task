@@ -12,8 +12,8 @@
   Для запуска достаточно <br>
   1 - cd p_num_django <br>
   2 - pip install virtualenv <br>
-    >2.1 - virtualenv envname  <br>
-    >2.2 - envname\scripts\activate <br>
+    > 2.1 - virtualenv envname  <br>
+    > 2.2 - envname\scripts\activate <br>
   3 - pip install -r requirements.txt <br>
   4 - python manage.py runserver <br>
   Done.
