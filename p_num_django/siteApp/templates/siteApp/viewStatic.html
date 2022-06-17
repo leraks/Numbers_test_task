@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <div class="header">
+        <div class="header-content">
+            <h1>Static Web Site</h1>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="content">
+        <div class="block-info-sum">
+            <div class="total-sum">
+                <h1>{{summ}}</h1>
+            </div>
+        </div>
+
+        {% if not count_p %}
+            <a href="/1">Pagination Page 1 ( 1- 15) </a>
+        {% endif %}
+
+        <div class="block-info-table">
+            <div class="table">
+                {% for i in data %}
+                <table class="iksweb">
+                    <tbody>
+                        <tr>
+                            <td>{{ i.0 }}</td>
+                            <td>{{ i.1 }}</td>
+                            <td>{{ i.2 }}</td>
+                            <td>{{ i.3 }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% endfor %}
+            </div>
+            {% if data.has_next %}
+                <a href="/{{data.next_page_number}}">Next</a>
+            {% endif %}
+            {% if data.has_previous %}
+                <a href="/{{data.previous_page_number}}">Previous</a>
+            {% endif %}
+        </div>
+
+    </div>
+{% endblock %}
