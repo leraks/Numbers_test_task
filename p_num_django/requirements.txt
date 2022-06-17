@@ -7,3 +7,6 @@ pycodestyle==2.7.0
 pytz==2021.1
 sqlparse==0.4.2
 toml==0.10.2
+google-auth-httplib2
+google-auth-oauthlib
+google-api-python-client
